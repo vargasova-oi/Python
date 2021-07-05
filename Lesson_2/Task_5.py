@@ -17,7 +17,7 @@ while i <= 5:
     # узнаем длину списка
     N = len(my_list)
     n = 0
-    while n < N - 1:
+    while n <= N - 1:
         # Если введенное значение больше, то вводим в начале и выпрыгиваем
         if my_list[n] < p:
             my_list.insert(n, p)
