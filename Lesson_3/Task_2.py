@@ -4,17 +4,9 @@
 # Функция должна принимать параметры как именованные аргументы.
 # Осуществить вывод данных о пользователе одной строкой.
 
-def first_func():
-    name = 'Olga'
-    surname = 'Var'
-    year = 80
-    town = 'Moscow'
-    mail = 'ulola@mail.ru'
-    phone = 75584
-    return name, surname, year, town, mail, phone
+def first_func(**kwargs):
+    return ' '.join(kwargs.values())
 
 
-my_list = first_func()
-
-for el in my_list:
-    print(el, end=', ')
+print(first_func(name=input("Укажите имя: "), surname=input("Фамилию: "), year=input("Год рождения: "),
+                 town=input("Город: "), mail=input("Email: "), phone=input("И телефон: ")))
