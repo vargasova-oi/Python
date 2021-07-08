@@ -4,16 +4,15 @@
 def my_func(arg_1, arg_2, arg_3):
     """Возвращает кортеж значений: сумму наибольших двух аргументов и все 3 аргумента"""
     try:
-        arg_1 = float(input("Укажите перый аргумент: "))
-        arg_2 = float(input("Укажите второй аргумент: "))
-        arg_3 = float(input("Укажите третий аргумент: "))
+        arg_1 = float(arg_1)
+        arg_2 = float(arg_2)
+        arg_3 = float(arg_3)
     except ValueError:
         """Обработка ошибочного ввода строкового значения"""
         return
     my_sum = arg_1 + arg_2 + arg_3 - min(arg_1, arg_2, arg_3)
 
-    return my_sum, arg_1, arg_2, arg_3
+    return my_sum
 
 
-my_sum_val, arg_1_val, arg_2_val, arg_3_val = my_func(1, 2, 3)
-print(f"Если сложить два наибольших числа из: {arg_1_val}, {arg_2_val} и {arg_3_val}, то получится {my_sum_val}")
+print(my_func(input("Первый аргумент: "), input("Второй аргумент: "), input("Третий аргумент: ")))
