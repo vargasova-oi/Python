@@ -10,8 +10,8 @@ def my_div(arg_1, arg_2):
 
     """
     try:
-        arg_1 = float(input("Укажите делимое (то, что нужно разделить): "))
-        arg_2 = float(input("Укажите делитель (на что нужно разделить): "))
+        arg_1 = float(arg_1)
+        arg_2 = float(arg_2)
         rel = arg_1 / arg_2
     except (ValueError, ZeroDivisionError, TypeError) as err:
         """Обработка ввода строкового значения и ситуации деления на ноль"""
@@ -20,9 +20,4 @@ def my_div(arg_1, arg_2):
     return rel
 
 
-# rel_val, arg_1_val, arg_2_val = my_div(1, 2)
-# print(f"Если разделить {arg_1_val} на {arg_2_val}, то получится {rel_val}")
-# так не получается, ломается, если ввели строковый аргумент.
-# Пока не пойму, как вывести на экран и аргументы?
-
-print(f"Если разделить, то получится {my_div(1, 2)}")
+print(my_div(input("Укажите делимое (что нужно разделить): "), input("Укажите делитель (на что нужно разделить): ")))
