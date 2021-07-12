@@ -17,8 +17,12 @@ class Road:
     def __init__(self, weight, thick):
         self.weight = int(weight)
         self.thick = int(thick)
+        print(weight, thick)
+
+    def mass_asphalt(self):
         fin_weight = self.weight * self.thick * Road._length * Road._width / 1000
         print(fin_weight, "(в тоннах)")
 
 
 r = Road(25, 5)
+r.mass_asphalt()
